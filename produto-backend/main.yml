@@ -1,0 +1,20 @@
+server:
+  applicationConnectors:
+    - type: http
+      port: 9000
+  adminConnectors:
+    - type: http
+      port: 9001
+
+# Database settings.
+database:
+    # the name of the JDBC driver, mysql in our case
+    driverClass: com.mysql.jdbc.Driver
+    # the username
+    user: root
+    # the password
+    password: 1q2w3e4r
+    # the JDBC URL; the database is called hello_world
+    url: jdbc:mysql://8.9.8.204:3306/estoque?useUnicode=true&characterEncoding=UTF-8&serverTimezone=GMT
+    # the SQL query to run when validating a connection's liveness
+    validationQuery: "/* MyService Health Check */ SELECT 1"

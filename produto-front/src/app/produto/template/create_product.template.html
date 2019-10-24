@@ -1,0 +1,45 @@
+<md-dialog>
+    <form ng-cloak>
+
+        <md-toolbar>
+            <div class="md-toolbar-tools">
+                <h2>Cria produto</h2>
+            </div>
+        </md-toolbar>
+
+        <md-dialog-content>
+            <div class="md-dialog-content">
+                <md-input-container class="md-block">
+                    <label>Nome</label>
+                    <input ng-model="nome">
+                </md-input-container>
+
+                <md-input-container class="md-block">
+                    <label>Descrição</label>
+                    <input ng-model="descricao">
+                </md-input-container>
+
+                <md-input-container class="md-block">
+                    <label>Quantidade</label>
+                    <input ng-model="quantidade">
+                </md-input-container>
+
+                <md-input-container class="md-block">
+                    <label>CodigoBarra</label>
+                    <input ng-model="codigoBarra">
+                </md-input-container>
+                
+                <md-input-container class="md-block">
+                    <label>Categoria</label>
+                    <input ng-model="categoria">
+                </md-input-container>
+
+            </div>
+        </md-dialog-content>
+
+        <md-dialog-actions layout="row">
+            <md-button ng-click="cancel()">Cancela</md-button>
+            <md-button ng-click="criaProduto()" class="md-primary">Criar</md-button>
+        </md-dialog-actions>
+    </form>
+</md-dialog>

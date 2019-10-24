@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<databaseChangeLog
+	xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+         http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-2.0.xsd">
+
+	<changeSet id="1" author="bernardo">
+		<createTable tableName="produto">
+			<column name="id" type="bigint" autoIncrement="true">
+				<constraints primaryKey="true" nullable="false" />
+			</column>
+			<column name="nome" type="varchar(40)" />
+			<column name="descricao" type="varchar(250)" />
+			<column name="quantidade" type="bigint" />
+			<column name="categoria" type="varchar(250)" />
+			<column name="codigoBarra" type="bigInt" />			
+		</createTable>
+
+		<insert tableName="produto">
+			<column name="nome">Ovo</column>
+			<column name="descricao">Ovo Grande</column>
+			<column name="categoria">2</column>
+			<column name="codigoBarra">3235345</column>
+			<column name="quantidade">6</column>
+		</insert>
+		
+		<insert tableName="produto">
+			<column name="nome">Cerveja</column>
+			<column name="descricao">Long neck</column>
+			<column name="categoria">2</column>
+			<column name="codigoBarra">325345</column>
+			<column name="quantidade">8</column>
+		</insert>
+		
+		<insert tableName="produto">
+			<column name="nome">Vinho </column>
+			<column name="descricao">Vinho tinto</column>
+			<column name="categoria">2</column>
+			<column name="codigoBarra">32345</column>
+			<column name="quantidade">9</column>
+		</insert>
+		
+		<insert tableName="produto">
+			<column name="nome">Macarrão </column>
+			<column name="descricao">Macarrão parafuso</column>
+			<column name="categoria">2</column>
+			<column name="codigoBarra">354345</column>
+			<column name="quantidade">9</column>
+		</insert>
+	</changeSet>
+</databaseChangeLog>
